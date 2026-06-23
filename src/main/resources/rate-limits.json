@@ -1,0 +1,14 @@
+{
+  "adminClientIds": ["admin-1", "admin-2"],
+  "default": [
+    { "window": "1m", "maxRequests": 100 },
+    { "window": "10m", "maxRequests": 500 },
+    { "window": "1h", "maxRequests": 1000 },
+    { "window": "1d", "maxRequests": 5000 }
+  ],
+  "clients": {
+    "client-A": [
+      { "window": "1m", "maxRequests": 200 }
+    ]
+  }
+}

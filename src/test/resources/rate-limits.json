@@ -1,0 +1,7 @@
+{
+  "adminClientIds": ["test-admin"],
+  "default": [
+    { "window": "1m", "maxRequests": 3 }
+  ],
+  "clients": {}
+}
