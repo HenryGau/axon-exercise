@@ -14,10 +14,14 @@ public class ConfigLoader {
     private final ObjectMapper mapper = new ObjectMapper();
     private volatile RateLimitConfig cachedConfig;
     private volatile long lastModified = 0;
-    private volatile String configPath;
+    private final String configPath;
 
     public ConfigLoader() {
-        this.configPath = System.getProperty("rate.limit.config.path", "rate-limits.json");
+        this(System.getProperty("rate.limit.config.path", "rate-limits.json"));
+    }
+
+    ConfigLoader(String configPath) {
+        this.configPath = configPath;
     }
 
     public RateLimitConfig getConfig() {
